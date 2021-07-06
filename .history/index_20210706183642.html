@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 paskaita</title>
+</head>
+<body>
+    <script>
+        "use strict";
+    
+        
+    //ar galim sudaryti trikampi - trikampioSudarymas()
+    //kategorija pagal krastine - kategorijaKrastine()
+    //kategorija pagal kampa  - kategorijaKampas()
+    
+    function trikampioSudarymas(trikampis) {
+
+        var tikrininimas = false;
+        if((trikampis[0] < trikampis[1]+trikampis[2]) && (trikampis[1] < trikampis[0]+trikampis[2]) && (trikampis[2] < trikampis[1]+trikampis[0])) 
+        { 
+           tikrininimas = true;
+        }
+        return tikrininimas;
+    }
+
+    function kategorijaKrastine(trikampis) {
+        var a = trikampis[0];
+        var b = trikampis[1];
+        var c = trikampis[2];
+        
+        //pagal krastine
+        if(a != b && b != c && c != a) {// ivairiakrastis
+            console.log("Trikampis yra ivairiakrastis");
+        } else if(a==b && b==c && a==c) {// lygiakrastis
+            console.log("Trikampis yra lygiakrastis");
+        } else { //lygiasonis
+            console.log("Trikampis yra lygiasonis")
+        }
+    }
+
+    //Procedurinis
+    var trikampis = [3,4,5]; // trikampis statusis, ivariakrastis
+
+    if(trikampioSudarymas(trikampis)) {
+        console.log("Trikampi sudaryti galime");
+
+        kategorijaKrastine(trikampis);
+
+
+        if( (a*a)+(b*b) == (c*c) || (c*c + b*b == a*a) || (c*c + a*a == b*b)) {
+            console.log("Trikampis yra statusis");
+        } else if((a*a)+(b*b) < (c*c) || (c*c)+(b*b) < (a*a) || (a*a)+(c*c) < (b*b)) {
+            console.log("Trikampis yra bukasis");
+        } 
+        else {
+            console.log("Trikampis yra smailusis");
+        }
+        
+    } else {
+        console.log("Trikampio sudaryti negalime");
+    }
+
+    //Funkcinis
+
+    </script>
+</body>
+</html>
