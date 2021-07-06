@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22 paskaita</title>
-
-    <style>
-        .testavimas {
-            display: none;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -134,12 +127,7 @@
     document.querySelector("#patvirtinti").addEventListener("click", function() {
         var a = parseFloat(document.querySelector("#akrastine").value);
         var b = parseFloat(document.querySelector("#bkrastine").value);
-        var c = parseFloat(document.querySelector("#ckrastine").value);
-        programosPaleidimas(a,b,c);
-    });
-
-    document.querySelector("#testuok").addEventListener("click", function() { 
-        testavimoFunkcija();
+        var c = parseFloat(document.querySelector("#akrastine").value);
     });
 
     </script>

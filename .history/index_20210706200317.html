@@ -5,28 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22 paskaita</title>
-
-    <style>
-        .testavimas {
-            display: none;
-        }
-    </style>
-
 </head>
 
+<div class="krastines">
+    <input type="text" id="akrastine" name="akrastine">
+</div>
+
+
+
 <body>
-
-    <div class="krastines">
-        <input type="text" id="akrastine" name="akrastine">
-        <input type="text" id="bkrastine" name="bkrastine">
-        <input type="text" id="ckrastine" name="ckrastine">
-        <button id="patvirtinti">Patvirtinti</button>
-    </div>
-
-    <div class="testavimas">
-        <button id="testuok">Testuoti programa</button>
-    </div>
-
     <script>
         "use strict";
         
@@ -131,16 +118,7 @@
         }
     }
 
-    document.querySelector("#patvirtinti").addEventListener("click", function() {
-        var a = parseFloat(document.querySelector("#akrastine").value);
-        var b = parseFloat(document.querySelector("#bkrastine").value);
-        var c = parseFloat(document.querySelector("#ckrastine").value);
-        programosPaleidimas(a,b,c);
-    });
-
-    document.querySelector("#testuok").addEventListener("click", function() { 
-        testavimoFunkcija();
-    });
+    
 
     </script>
 </body>
