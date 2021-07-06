@@ -34,13 +34,11 @@
     //kategorija pagal krastine - kategorijaKrastine()
     //kategorija pagal kampa  - kategorijaKampas()
 
-
-    //generuoja atsitiktinius skaicius intervale, kurie turi viena skaiciu po kablelio
     function atsitiktinis(intervaloPradzia, intervaloPabaiga) {
-        return parseFloat((Math.random() * (intervaloPabaiga - intervaloPradzia + 1)).toFixed(1)) + intervaloPradzia;
+        return (Math.random() * (intervaloPabaiga - intervaloPradzia + 1)).toFixed(1) + intervaloPradzia;
     //math floor pasiima sveikaja dali ir suapvalina
-    //.toFixed(0) - 0 skaicius po kablelio
-    //.toFixed(1) - 1 skaicius po kablelio
+    //.toFixed(0) - 1 skaicius po kablelio
+    //.toFixed(1) - 2 skaicius po kablelio
     }
     
     function trikampioSudarymas(trikampis) {
